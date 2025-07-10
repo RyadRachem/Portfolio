@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Outfit:wght@100..900&family=Poppins:wght@600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+
+
+.box1{
+  background-color: #bbf4c1;
+  border-radius: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   font-size: 24px ;
+   color: black;
+}
+.box2{
+  background-color: #bbf4c1;
+  border-radius: 13px;
+  position: relative;
+}
+.box3{
+  border-radius: 13px;
+  background-size: cover;
+background-position: center center;
+background-repeat: no-repeat;
+}
+.box4{
+  background-color: #bbf4c1;
+  border-radius: 13px;
+  display: flex;
+  gap: 2.4%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: auto;
+}
+.el{
+      display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 64%;
+  border-bottom: 1.5px solid #5a9e61;
+}
+.el:last-child {
+  border-bottom: none;
+}
+.box5{
+  background-color: #bbf4c1;
+  border-radius: 13px;
+  position: relative;
+  background-size: cover;
+background-position: center center;
+background-repeat: no-repeat;
+  opacity:0.85;
+  transition: opacity 0.3s ;
+}
+.box2:hover,
+.box6:hover {
+  cursor: pointer;
+}
+
+.box5:hover,.box5:hover .ex{
+  opacity: 1;
+  cursor: pointer;
+}
+
+
+/* ✅ NEW: cancel hover effect if .box5 is expanded */
+.box5.expanded:hover .darkus {
+  opacity: 0;        /* reset opacity to normal */
+  cursor: default;     /* don't show pointer cursor */
+}
+.box5.expanded{
+  opacity: 1;
+}
+
+
+.box5.expanded:hover .ex {
+  opacity: 0;          /* hide the text again */
+}
+
+.darkus.expanded{
+  opacity: 0;
+  height: 0;
+}
+
+.darkus{
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  border-radius: 12px;
+  opacity: 0.1;
+}
+.ex{
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%,-50%);
+  color: white;
+  opacity: 0;
+  font-size: 21px;
+  width: 100%;
+  text-align: center;
+  transition: opacity 0.3s ;
+}
+.box6{
+  background-color: #5a9e61;
+  border-radius: 13px;
+  position: relative;
+}
+.box6.expanded{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box7{
+  background-color: #bbf4c1;
+  border-radius: 13px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+
+.con{
+  font-size: 2em;
+  cursor: pointer;
+  color: black;
+  transition: transform 0.3s ease, filter 0.3s ease-in;
+  display: inline-block; 
+}
+
+.ar{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+}
+.ci{
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 20px;
+}
+html, body {
+  min-width: 700px;
+
+}
+
+
+.main{
+  height: 100vh;
+  max-width: 100%;
+  min-width: 700px;
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  background-color: #E2F8E6 ;
+}
+
+.pi{
+    font-size: 25px;
+    position: absolute;
+    bottom: 12px;
+    left: 10px;
+    font-weight: 600;
+    font-family: "PlayFair Display", serif;
+    animation: fadeIn 0.7s ease forwards;
+}
+
+.pr{
+  font-family: "PlayFair Display", serif;
+  font-weight: 700;
+  font-size: 18px;
+  left: 9px;
+  bottom: 10px;
+  position: absolute;
+  animation: fadeIn 0.7s ease forwards;
+}
+
+.grid-container{
+  display: grid;
+  width: 80%;
+  max-width: 1020px;
+  height: 90%;
+  max-height: 501px;
+  margin: auto;
+  grid-template-columns: 1fr 200px 1fr;
+  grid-template-rows: 12% repeat(5,1fr);
+  gap: 1em;
+  grid-template-areas: 
+  "box-upBar box-upBar box-upBar"
+  "box-exp box-image box-skills"
+  "box-exp box-image box-skills" 
+  "box-projects box-image box-skills" 
+  "box-projects box-about box-skills" 
+  "box-projects box-about box-contact" 
+}
+
+.intro{
+  font-weight: 700;
+  font-size: clamp(25px,5vw,40px);
+}
+
+.con:hover{
+  transform: scale(1.2);
+}
+
+.pc{
+  width: 234px;
+  border-radius: 12px;
+  height: 150px;
+}
+
+.beeeeeeep{
+  font-size: 22px;
+  font-family: "PlayFair Display", serif;
+  font-weight: 700;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px); /* optional slight movement */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.expandus {
+  overflow-y: auto;
+  height: 100%;
+
+  /* Hide scrollbar for WebKit (Chrome, Safari) */
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE and Edge */
+}
+
+.expandus::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari, Opera */
+}
+
+.expanded-content {
+  background-color: #5a9e61; /* heavier green */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 20px;
+  color: white;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.4s ease-in;
+}
+.expanded-content2 {
+  background: linear-gradient(135deg, #88d498, #a8e6cf);  
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 20px;
+  color: white;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.4s ease-in;
+  padding: 31px;
+  height: 67%;
+  overflow-y: auto;
+line-height: 1.7;
+}
+
+.sum{
+  display: flex;
+  align-items: center;
+}
+
+.exp-text {
+  font-size: 16px;
+  flex: 1;
+}
+
+.exp-img {
+    width: 330px;
+    height: auto;
+    border-radius: 4px;
+    background-size: cover;
+}
+
+.section-title {
+  font-family: "PlayFair Display", serif;
+  font-size: 26px;
+  font-weight: 700;
+  align-self: flex-start;
+  color: white;
+}
+
+.project-expand-wrapper {
+  height: 100%;
+  width: 100%;
+  border-radius: 13px;
+  padding: 20px;
+  box-sizing: border-box;
+  color: white;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #5a9e61 #e6f8ec; /* thumb | track */
+}
+
+/* Chrome, Safari, Edge */
+.project-expand-wrapper::-webkit-scrollbar {
+  width: 8px;
+}
+
+.project-expand-wrapper::-webkit-scrollbar-track {
+  background: #e6f8ec; /* light green/whiteish */
+  border-radius: 10px;
+}
+
+.project-expand-wrapper::-webkit-scrollbar-thumb {
+  background-color: #5a9e61; /* green (matches your theme) */
+  border-radius: 10px;
+  border: 2px solid #e6f8ec; /* optional inner space around thumb */
+}
+
+.project-expand-wrapper::-webkit-scrollbar-thumb:hover {
+  background-color: #498d50; /* darker green on hover */
+}
+
+
+.project-showcase {
+    margin: 30px;
+    padding: 20px;
+    gap: 20px;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: #5a9e61;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    animation: fadeIn 0.4s ease-in;
+}
+.tex{
+  height: 100%;
+}
+.picts{
+  width: 50%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.ili{
+  height: 100%;
+}
+.picts-horizontal {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  width: 62%;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+  float: right;
+}
+
+.picts-horizontal::-webkit-scrollbar {
+  height: 6px;
+}
+
+.picts-horizontal::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.slide-img {
+  height: 225px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+
+
+.im{
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.project-text {
+  flex: 1;
+  overflow-y: auto;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.project-text::-webkit-scrollbar {
+  display: none;
+}
+
+.project-gallery {
+  flex: 1;
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+  padding-bottom: 10px;
+}
+
+.project-gallery img {
+  height: 220px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-gallery img:hover {
+  transform: scale(1.05);
+}
+
+.project-gallery::-webkit-scrollbar {
+  display: none;
+}
+
+.expanded-box2-scroll {
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 10px; /* Optional: keeps content from touching scrollbar edge */
+
+  /* Hide scrollbar for all browsers */
+  scrollbar-width: none;         /* Firefox */
+  -ms-overflow-style: none;      /* IE and Edge */
+}
+
+.expanded-box2-scroll::-webkit-scrollbar {
+  display: none;                 /* Chrome, Safari */
+}
