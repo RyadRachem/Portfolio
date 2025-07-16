@@ -19,6 +19,9 @@ import imjb4 from "./assets/Capture d’écran (184).png"
 import imjb5 from "./assets/Capture d’écran (185).png"
 import imjb6 from "./assets/Capture d’écran (186).png"
 import imjb7 from "./assets/Capture d’écran (187).png"
+import imjb8 from "./assets/Screenshot 2025-07-16 155545.png"
+import imjb9 from "./assets/Screenshot 2025-07-16 155758.png"
+import imjb11 from "./assets/Screenshot 2025-07-16 155847.png"
 
 import './App.css'
 import 'bootstrap-icons/font/bootstrap-icons.css';
@@ -94,6 +97,21 @@ function App() {
           At the same time, users and enthusiasts can explore the platform to discover Algeria's historical treasures, learn about its monuments, traditions, and artifacts, and deepen their understanding of the country's cultural identity. <br />
 
           Whether you're a professional looking to collaborate with peers, or someone passionate about learning more about Algeria’s patrimony, Athar bridges the gap between knowledge and culture.</p>
+          </div>
+
+        </div>
+        <div className="project-showcase">
+          
+          <div className="picts-horizontal">
+              <img className="slide-img" src={imjb8} alt="" />
+              <img className="slide-img" src={imjb9} alt="" />
+              <img className="slide-img" src={imjb11} alt="" />
+              
+          </div>
+          <div className="tex">
+          <h1>Zayno</h1>
+          <br />
+          <p className="textos">Welcome to Zayno, your online boutique for modern and affordable accessories that elevate your everyday style. From sleek watches and trendy face masks to practical pouches, we offer a curated collection designed for simplicity, comfort, and fashion. Whether you're upgrading your look or searching for the perfect gift, our products combine elegance and utility all at your fingertips.</p>
           </div>
 
         </div>
